@@ -83,6 +83,7 @@ bool Merge(SqList &L1, SqList &L2, SqList &L3){
 			L3.data[k++] = L2.data[j++];
 		}
 	}
+
 	if(i < L1.length){
 		for(; i < L1.length; i++){
 			L3.data[k++] = L1.data[i];
@@ -109,7 +110,7 @@ int main(){
 	InitList(L1);
 	InitList(L2);
 	InitList(L3);
-	
+
 	InsertElem(L1, 1, 1);
 	InsertElem(L1, 2, 3);
 	InsertElem(L1, 3, 5);
@@ -123,6 +124,8 @@ int main(){
 	InsertElem(L2, 4, 8);
 	InsertElem(L2, 5, 10);
 	InsertElem(L2, 6, 11);
+
+    InsertElem(L2, 6, 11);
 
 	Merge(L1, L2, L3);
 
